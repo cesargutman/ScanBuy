@@ -11,13 +11,18 @@ namespace ScanBuy
 	// User Interface of the application, as well as listening (and optionally responding) to
 	// application events from iOS.
 	[Register ("AppDelegate")]
-	public partial class AppDelegate : UIApplicationDelegate
+	public partial class AppDelegate : UIApplicationDelegate, IAppDelegate
 	{
 		// class-level declarations
 		
 		public override UIWindow Window {
 			get;
 			set;
+		}
+
+		public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
+		{
+			return true;
 		}
 		
 		// This method is invoked when the application is about to move from active to inactive state.
@@ -42,6 +47,21 @@ namespace ScanBuy
 		public override void WillTerminate (UIApplication application)
 		{
 		}
+
+		#region IAppDelegate
+
+		public void ChangeNavigationController (UINavigationController nc)
+		{
+
+		}
+
+		#endregion
+
+	}
+
+	public interface IAppDelegate
+	{
+		void ChangeNavigationController (UINavigationController nc);
 	}
 }
 
