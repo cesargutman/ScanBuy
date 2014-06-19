@@ -11,8 +11,8 @@ using System.CodeDom.Compiler;
 
 namespace ScanBuy
 {
-	[Register ("ScanBuyViewController")]
-	partial class ScanBuyViewController
+	[Register ("MenuViewController")]
+	partial class MenuViewController
 	{
 		void ReleaseDesignerOutlets ()
 		{

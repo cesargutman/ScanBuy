@@ -4,12 +4,12 @@ namespace ScanBuy
 {
 	public static class KeysAndTokens
 	{
-		//
+
 		#warning "Paste here your credentials"
 		public static class ScanditApi
 		{
 			// Paste here your Scandit API key. If you don't have any key yet, go to http://www.scandit.com/pricing/
-			public static string ScanditKey { get { return ""; } }
+			public static string ScanditKey { get { return "pXXetPEqEeOMt51CkYn1t4ave+cxqKv6yAM+ZdtUfjc"; } }
 		}
 
 		public static class TwitterApi

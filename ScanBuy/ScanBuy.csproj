@@ -88,10 +88,25 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
-    <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="ECSlidingViewControllerSDK">
+      <HintPath>..\lib\ECSlidingViewControllerSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="ScanditSDK">
+      <HintPath>..\lib\ScanditSDK.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\menu-background.png" />
+    <BundleResource Include="Resources\menu-background%402x.png" />
+    <BundleResource Include="Resources\menu.png" />
+    <BundleResource Include="Resources\menu%402x.png" />
+    <BundleResource Include="Resources\scan.png" />
+    <BundleResource Include="Resources\scan%402x.png" />
+    <BundleResource Include="Resources\search.png" />
+    <BundleResource Include="Resources\search%402x.png" />
+    <BundleResource Include="Resources\more.png" />
+    <BundleResource Include="Resources\more%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -104,8 +119,24 @@
     <Compile Include="ScanBuyViewController.designer.cs">
       <DependentUpon>ScanBuyViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuTableViewController.cs" />
     <Compile Include="KeysAndTokens.cs" />
+    <Compile Include="MenuViewController.cs" />
+    <Compile Include="MenuViewController.designer.cs">
+      <DependentUpon>MenuViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecordViewController.cs" />
+    <Compile Include="RecordViewController.designer.cs">
+      <DependentUpon>RecordViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScanViewController.cs" />
+    <Compile Include="ScanViewController.designer.cs">
+      <DependentUpon>ScanViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General.cs" />
+    <Compile Include="ProductCell.cs" />
+    <Compile Include="ProductCell.designer.cs">
+      <DependentUpon>ProductCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />

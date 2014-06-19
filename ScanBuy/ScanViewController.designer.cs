@@ -11,11 +11,19 @@ using System.CodeDom.Compiler;
 
 namespace ScanBuy
 {
-	[Register ("ScanBuyViewController")]
-	partial class ScanBuyViewController
+	[Register ("ScanViewController")]
+	partial class ScanViewController
 	{
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITableView tblProducts { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (tblProducts != null) {
+				tblProducts.Dispose ();
+				tblProducts = null;
+			}
 		}
 	}
 }
