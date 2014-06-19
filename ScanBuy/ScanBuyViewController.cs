@@ -3,12 +3,17 @@ using System.Drawing;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
-using MonoTouch.Dialog;
+
+using ECSlidingViewControllerSDK;
 
 namespace ScanBuy
 {
-	public partial class ScanBuyViewController : UIViewController
+	public partial class ScanBuyViewController : ECSlidingViewController
 	{
+		public ScanBuyViewController () : base ()
+		{
+		}
+
 		public ScanBuyViewController (IntPtr handle) : base (handle)
 		{
 		}
@@ -26,8 +31,6 @@ namespace ScanBuy
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
-			// Perform any additional setup after loading the view, typically from a nib.
 		}
 
 		public override void ViewWillAppear (bool animated)
