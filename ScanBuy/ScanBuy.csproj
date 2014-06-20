@@ -94,6 +94,9 @@
     <Reference Include="ScanditSDK">
       <HintPath>..\lib\ScanditSDK.dll</HintPath>
     </Reference>
+    <Reference Include="SQLite">
+      <HintPath>..\lib\SQLite.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -136,6 +139,11 @@
     <Compile Include="ProductCell.cs" />
     <Compile Include="ProductCell.designer.cs">
       <DependentUpon>ProductCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs" />
+    <Compile Include="SaveViewController.cs" />
+    <Compile Include="SaveViewController.designer.cs">
+      <DependentUpon>SaveViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

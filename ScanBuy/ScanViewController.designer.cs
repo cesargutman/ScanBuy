@@ -16,7 +16,7 @@ namespace ScanBuy
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UITableView tblProducts { get; set; }
+		MonoTouch.UIKit.UITableView tblProducts { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{

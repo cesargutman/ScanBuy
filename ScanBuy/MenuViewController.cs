@@ -45,8 +45,7 @@ namespace ScanBuy
 		#region Instance Variables
 
 		string [] rowNames = new [] { "Escanear producto", "Ver historial" };
-		ScanViewController scanVC;
-		RecordViewController recordVC;
+
 		UITableViewController ownerVC;
 
 		#endregion

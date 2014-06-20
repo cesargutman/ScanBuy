@@ -6,6 +6,7 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
 using ECSlidingViewControllerSDK;
+using System.IO;
 
 namespace ScanBuy
 {
@@ -27,6 +28,9 @@ namespace ScanBuy
 		// class-level declarations
 		#region Properties
 
+		string database_path;
+		public string DatabasePath { get { return database_path; } }
+
 		public ScanBuyViewController ScanBuyVC { get; private set; }
 		public override UIWindow Window {
 			get;
@@ -47,6 +51,8 @@ namespace ScanBuy
 			} else {
 				throw new Exception ("The RootViewController is not a ScanViewController class");
 			}
+
+			CreateDatabase ();
 
 			// Creates the button that shows the menu
 			btnMenu = new UIBarButtonItem (UIImage.FromFile ("menu.png"), UIBarButtonItemStyle.Plain, (sender, e) => {
@@ -123,6 +129,17 @@ namespace ScanBuy
 			}
 
 			ScanBuyVC.ResetTopView (true);
+		}
+
+		public void CreateDatabase ()
+		{
+			// Aquí vamos a guardar la base de datos
+			var documentos = Environment.GetFolderPath (Environment.SpecialFolder.Personal);
+			database_path = Path.Combine (documentos, "MiBaseDeDatos.db");
+
+			// Creamos la tabla donde guardaremos nuestros datos
+			using (var db = new SQLite.SQLiteConnection (database_path))
+				db.CreateTable<Product> ();
 		}
 	}
 
